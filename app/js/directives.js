@@ -1,8 +1,5 @@
 'use strict';
 
 // angular.
-//   module('ticketyTackety.directives',
-//     [
-//       
-//     ]
-//   ).directive();
+//   module('ticketyTackety.directives', []).
+//   directive();

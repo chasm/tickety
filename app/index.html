@@ -18,19 +18,19 @@
     <div data-ng-controller="BoardCtrl">
       <div id="gameboard">
         <div id="row1" class="rw tr">
-          <div id="cell1" class="cll lt {{class1}}">{{cell1}}</div>
-          <div id="cell2" class="cll ct {{class2}}">{{cell2}}</div>
-          <div id="cell3" class="cll rt {{class3}}">{{cell3}}</div>
+          <div id="cell1" class="cll lt {{class0}}" data-ng-click="makeMove(0)">{{cell0}}</div>
+          <div id="cell2" class="cll ct {{class1}}" data-ng-click="makeMove(1)">{{cell1}}</div>
+          <div id="cell3" class="cll rt {{class2}}" data-ng-click="makeMove(2)">{{cell2}}</div>
         </div>
         <div id="row2" class="rw mr">
-          <div id="cell4" class="cll lm {{class4}}">{{cell4}}</div>
-          <div id="cell5" class="cll cm {{class5}}">{{cell5}}</div>
-          <div id="cell6" class="cll rm {{class6}}">{{cell6}}</div>
+          <div id="cell4" class="cll lm {{class3}}" data-ng-click="makeMove(3)">{{cell3}}</div>
+          <div id="cell5" class="cll cm {{class4}}" data-ng-click="makeMove(4)">{{cell4}}</div>
+          <div id="cell6" class="cll rm {{class5}}" data-ng-click="makeMove(5)">{{cell5}}</div>
         </div>
         <div id="row3" class="rw br">
-          <div id="cell7" class="cll lb {{class7}}">{{cell7}}</div>
-          <div id="cell8" class="cll cb {{class8}}">{{cell8}}</div>
-          <div id="cell9" class="cll rb {{class9}}">{{cell9}}</div>
+          <div id="cell7" class="cll lb {{class6}}" data-ng-click="makeMove(6)">{{cell6}}</div>
+          <div id="cell8" class="cll cb {{class7}}" data-ng-click="makeMove(7)">{{cell7}}</div>
+          <div id="cell9" class="cll rb {{class8}}" data-ng-click="makeMove(8)">{{cell8}}</div>
         </div>
       </div>
     
@@ -40,8 +40,11 @@
     <!-- In production use:
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     -->
-    <script src="lib/angular/angular.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
+    <script src="/lib/angular/angular.js"></script>
+		<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/0.2.0/angularfire.min.js"></script>
+    <script src="/js/uuid.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/controllers.js"></script>
   </body>
 </html>

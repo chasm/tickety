@@ -1,8 +1,5 @@
 'use strict';
 
 // angular.
-//   module('ticketyTackety.services',
-//     [
-//       
-//     ]
-//   ).value();
+//   module('ticketyTackety.services', []).
+//   service();

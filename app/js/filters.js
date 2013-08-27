@@ -1,8 +1,5 @@
 'use strict';
 
 // angular.
-//   module('ticketyTackety.filters',
-//     [
-//       
-//     ]
-//   ).filter();
+//   module('ticketyTackety.filters', []).
+//   filter();
