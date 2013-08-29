@@ -2,16 +2,12 @@
 
 angular.
   module('ticketyTackety.controllers', []).
-  controller('BoardCtrl', [
+  controller('GameCtrl', [
     '$scope',
-    'angularFire',
-    function($scope, angularFire) {
-      var url = 'https://tickety.firebaseio.com/board';
-      var promise = angularFire(url, $scope, 'board', { game: "         " });
+    'fb',
+    function($scope, fb) {
     
       $scope.clearBoard = function() {
-        $scope.board.game = "         ";
-        $scope.setBoard();
         return false;
       };
       
@@ -28,6 +24,15 @@ angular.
           $scope.cell8 = $scope.board.game.charAt(8);
         }
       };
+      
+    }
+  ]).
+  controller('BoardCtrl', [
+    '$scope',
+    'angularFire',
+    function($scope, angularFire) {
+      var url = 'https://tickety.firebaseio.com/board';
+      var promise = angularFire(url, $scope, 'board', { game: "         " });
       
       $scope.makeMove = function(idx) {
         console.log("making a move in square " + idx);

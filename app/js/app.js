@@ -3,9 +3,11 @@
 
 'use strict';
 
-angular.module('ticketyTackety',
+window.tickety = angular.module('ticketyTackety',
   [
     'firebase',
-    'ticketyTackety.controllers'
+    'ticketyTackety.controllers',
+    'ticketyTackety.services',
+    'ngCookies'
   ]
 );

@@ -15,8 +15,8 @@
   <body>
 
     <h1><span class="tickety">Tickety</span><span class="tackety">Tackety</span></h1>
-    <div data-ng-controller="BoardCtrl">
-      <div id="gameboard">
+    <div data-ng-controller="GameCtrl">
+      <div id="gameboard" data-ng-controller="BoardCtrl" data-ng-cloak>
         <div id="row1" class="rw tr">
           <div id="cell1" class="cll lt {{class0}}" data-ng-click="makeMove(0)">{{cell0}}</div>
           <div id="cell2" class="cll ct {{class1}}" data-ng-click="makeMove(1)">{{cell1}}</div>
@@ -41,10 +41,12 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     -->
     <script src="/lib/angular/angular.js"></script>
+    <script src="/lib/angular/angular-cookies.js"></script>
 		<script src="https://cdn.firebase.com/v0/firebase.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/0.2.0/angularfire.min.js"></script>
     <script src="/js/uuid.js"></script>
     <script src="/js/app.js"></script>
+    <script src="/js/services.js"></script>
     <script src="/js/controllers.js"></script>
   </body>
 </html>
