@@ -1,20 +1,21 @@
 'use strict';
 
 angular.
-  module('ticketyTackety.services', []).
+  module('TicketyTackety.services', []).
   service('fb', [
     'angularFireCollection',
     '$cookies',
     function(angularFireCollection, $cookies) {
-      this.firebaseRef = new Firebase("https://tickety.firebaseio.com/games");
-      $cookies.userId = $cookies.userId || Math.uuid(16);
+      this.gamesRef = new Firebase("https://tickety.firebaseio.com/games");
+      // $cookies.userId = $cookies.userId || Math.uuid(16);
       
       this.startGame = function() {
-        this.gamesRef = this.firebaseRef.child('/games');
         this.games = angularFireCollection(this.gamesRef);
-        this.games.push({players: [0]});
-        
-        console.log(this.gamesRef.limit(1).endAt());
+        this.games.push({ boards: ["         "] });
+        this.gamesRef.limit(1).once('value', function(dataSnapshot) {
+          var ref = dataSnapshot.child('5').ref();
+          ref.transaction(function(data) { console.log(data.players.length); });
+        });
       };
 
       // this.userRef = this.firebaseRef.child('/player/' + $cookies.userId);

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.
-  module('ticketyTackety.controllers', []).
+  module('TicketyTackety.controllers', []).
   controller('GameCtrl', [
     '$scope',
     'fb',
